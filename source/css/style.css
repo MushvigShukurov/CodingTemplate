@@ -1,0 +1,184 @@
+:root{
+    --dark:#000;
+    --light:#fff;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    width: 100%;
+    min-height: 4rem;
+    background: var(--dark);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav>a{
+    background: transparent;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    color:var(--light) ;
+    transition: all .2s;
+}
+nav>a:hover{
+    background: var(--light);
+    color: var(--dark);
+}
+
+nav a.active{
+    background: royalblue;
+}
+nav .active:hover{
+    color: var(--light);
+}
+
+main{
+    background: rgb(41, 38, 38);
+    width: 100%;
+    min-height: calc(100vh - 8rem);
+}
+
+main .container{
+    max-width: 165rem;
+    margin: 0 auto;
+    min-height: calc(100vh - 8rem);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 1rem 0rem;
+}
+
+main .container .card-container{
+    width: calc(100% / 6);
+    height: 28rem;
+    padding: 1rem;
+}
+main .container .card-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .2s;
+}
+
+main .container .card-container img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.social{
+    width: 100%;
+    height: 4rem;
+    background: #293462;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social>a{
+    width: 4rem;
+    height: 4rem;
+    
+    font-size: 2rem;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social >a:hover{
+   animation: shake .1s linear 1;
+}
+footer{
+    background: var(--dark);
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    color: var(--light);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1615px){
+    main .container{
+        padding: 1rem 2rem;
+    }
+    main .container .card-container{
+        width: calc(100% / 5);
+        height: 28rem;
+    }
+}
+
+@media only screen and (max-width: 1426px){
+    
+    main .container .card-container{
+        width: calc(100% / 4);
+        height: 30rem;
+    }
+    main .container .card-container img:hover{
+        transform: scale(1.05);
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    
+    main .container .card-container{
+        width: calc(100% / 3);
+    }
+    
+}
+
+@media only screen and (max-width: 900px){
+    
+    main .container .card-container{
+        width: calc(100% / 2);
+    }
+    
+}
+
+@media only screen and (max-width: 700px){
+    
+    main .container .card-container{
+        width: 100%;
+        height: 50rem;
+    }
+    
+}
+
+@media only screen and (max-width: 700px){
+    
+    main .container .card-container{
+        height: 30rem;
+    }
+    
+}
+
+
+
+
+@keyframes shake{
+    0%,100%{
+        transform: rotate(0deg);
+        color: #fff;
+    }
+    25%{
+        transform: rotate(15deg);
+        color: #000;
+    }
+    50%{
+        transform: rotate(0deg);
+        color: #fff;
+    }
+    75%{
+        transform: rotate(-15deg);
+        color: #000;
+    }
+}
