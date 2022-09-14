@@ -1,0 +1,108 @@
+body {
+    background: rgb(41, 38, 38);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    min-height: 100vh;
+}
+
+.returnBack {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 4rem;
+    margin-bottom: 3rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main .col-4 {
+    width: calc(100% / 3);
+    padding: 1.3rem;
+}
+
+main .col-4 img {
+    width: 100%;
+}
+
+main .col-8 {
+    font-size: 1.6rem;
+    color: #fff;
+    width: calc(((100% / 3) * 2) - 3rem);
+}
+
+main .col-8 h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+
+main .col-8 .shared {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+main .col-8 .post-description {
+    font-size: 1.8rem;
+    line-height: 180%;
+    text-align: justify;
+}
+
+main .col-8 .author {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+main .col-8 .author a {
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+main .col-8 .author a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    main .col-4 {
+        width: 100%;
+        padding: 0rem;
+    }
+
+    main .col-4 img {
+        width: 100%;
+    }
+
+    main .col-8 {
+        width: 100%;
+    }
+    main .col-8 .post-description {
+        line-height: 170%;
+        text-align: left;
+    }
+}
